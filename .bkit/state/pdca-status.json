@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-04-02T04:31:01.502Z",
+  "lastUpdated": "2026-04-02T09:06:24.273Z",
   "activeFeatures": [
     "pdf",
     "pdf_",
@@ -58,9 +58,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-31T08:00:39.866Z",
-        "lastUpdated": "2026-04-02T04:31:01.502Z"
+        "lastUpdated": "2026-04-02T09:06:24.273Z"
       },
-      "lastFile": "D:\\Antigravity\\zelda\\src\\components\\InteractiveMap.tsx"
+      "lastFile": "D:\\Antigravity\\zelda\\src\\components\\KakaoAdBanner.tsx"
     },
     "data": {
       "phase": "do",
@@ -84,7 +84,7 @@
   "session": {
     "startedAt": "2026-03-26T07:27:22.625Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-04-02T04:31:01.502Z"
+    "lastActivity": "2026-04-02T09:06:24.273Z"
   },
   "history": [
     {
@@ -851,6 +851,162 @@
     },
     {
       "timestamp": "2026-04-02T04:31:01.502Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:49:30.156Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:49:45.153Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:50:08.646Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:50:43.133Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:50:51.862Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:51:38.724Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:51:43.450Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:56:19.869Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:56:53.079Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:57:16.158Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:58:04.268Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:58:55.704Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T08:59:19.829Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:00:39.650Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:00:53.777Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:01:44.370Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:03:14.079Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:03:29.396Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:03:48.879Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:04:40.172Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:04:50.120Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:05:17.818Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:05:35.141Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:05:45.188Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:06:01.994Z",
+      "feature": "zelda",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-04-02T09:06:24.273Z",
       "feature": "zelda",
       "phase": "do",
       "action": "updated"

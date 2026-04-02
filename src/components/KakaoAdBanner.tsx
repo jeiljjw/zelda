@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 
 interface KakaoAdBannerProps {
   adUnit: string
@@ -6,47 +6,33 @@ interface KakaoAdBannerProps {
   height: number
 }
 
-declare global {
-  interface Window {
-    KakaoBA?: {
-      requestAd?: (element: HTMLElement) => void
-    }
-  }
-}
+let pendingReload = false
 
 export default function KakaoAdBanner({ adUnit, width, height }: KakaoAdBannerProps) {
-  const ref = useRef<HTMLModElement>(null)
-
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const el = ref.current
-      if (!el) return
+    if (pendingReload) return
+    pendingReload = true
 
-      // Try KakaoBA SDK
-      if (window.KakaoBA?.requestAd) {
-        window.KakaoBA.requestAd(el)
-        return
-      }
+    requestAnimationFrame(() => {
+      // Remove existing script so SDK re-scans DOM
+      const existing = document.querySelector(
+        'script[src="//t1.daumcdn.net/kas/static/ba.min.js"]'
+      )
+      if (existing) existing.remove()
 
-      // Fallback: re-register the ad slot by re-creating the ins element
-      const parent = el.parentNode
-      if (parent) {
-        const newIns = document.createElement('ins')
-        newIns.className = 'kakao_ad_area'
-        newIns.style.display = 'none'
-        newIns.setAttribute('data-ad-unit', adUnit)
-        newIns.setAttribute('data-ad-width', String(width))
-        newIns.setAttribute('data-ad-height', String(height))
-        parent.replaceChild(newIns, el)
-      }
-    }, 200)
+      // Insert SDK script — it will scan the current DOM and find our <ins>
+      const script = document.createElement('script')
+      script.src = '//t1.daumcdn.net/kas/static/ba.min.js'
+      script.async = true
+      script.type = 'text/javascript'
+      document.body.appendChild(script)
 
-    return () => clearTimeout(timer)
-  }, [adUnit, width, height])
+      pendingReload = false
+    })
+  }, [])
 
   return (
     <ins
-      ref={ref}
       className="kakao_ad_area"
       style={{ display: 'none' }}
       data-ad-unit={adUnit}
