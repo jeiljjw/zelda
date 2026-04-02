@@ -33,7 +33,7 @@ export default function App() {
       <main className="flex-1 lg:ml-60 flex flex-col">
         <Header />
         <GlobalSearch open={searchOpen} onOpenChange={setSearchOpen} />
-        <div className="flex-1 overflow-y-auto px-4 sm:px-6" style={{ paddingTop: '20px', paddingBottom: '120px' }}>
+        <div className="flex-1 overflow-y-auto px-4 sm:px-6" style={{ paddingTop: '20px', paddingBottom: '110px' }}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/monsters" element={<Monsters />} />
@@ -56,6 +56,17 @@ export default function App() {
           </Routes>
         </div>
       </main>
+
+      {/* Fixed Bottom Ad Banner */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border flex justify-center items-center" style={{ height: '90px' }}>
+        <ins
+          className="kakao_ad_area"
+          style={{ display: 'none' }}
+          data-ad-unit="DAN-pJdf2RiEcucaxwi8"
+          data-ad-width="728"
+          data-ad-height="90"
+        />
+      </div>
     </div>
   )
 }
