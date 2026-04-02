@@ -1,0 +1,73 @@
+<h2>메인 페이지 레이아웃 — 어떤 구조가 좋을까요?</h2>
+<p class="subtitle">전체 타겟(초보~고수)을 아우르는 메인 화면</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>히어로 배너 + 바로가기</h3>
+      <p>젤다 느낌의 대형 히어로 이미지 아래 → 도감 / 공략 / Shrine / 요리 바로가기 카드</p>
+      <div class="mockup">
+        <div class="mockup-header">Preview</div>
+        <div class="mockup-body">
+          <div class="mock-nav" style="background:linear-gradient(135deg,#1a3a2f,#2d6a4f);color:#fff;padding:12px 20px;font-size:14px;">🗡️ Zelda: BotW Encyclopedia</div>
+          <div style="background:linear-gradient(135deg,#1a4731,#2d6a4f);color:#c8b99a;padding:50px 20px;text-align:center;font-size:18px;">
+            <strong>하이랄 대도감</strong><br>
+            <span style="font-size:13px;opacity:0.8;">몬스터 · 무기 · Shrine · 요리 · 공략</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:12px;">
+            <div style="background:#f0ebe3;padding:20px;text-align:center;border-radius:6px;font-size:12px;">👹 도감</div>
+            <div style="background:#f0ebe3;padding:20px;text-align:center;border-radius:6px;font-size:12px;">📖 공략</div>
+            <div style="background:#f0ebe3;padding:20px;text-align:center;border-radius:6px;font-size:12px;">🏛️ Shrine</div>
+            <div style="background:#f0ebe3;padding:20px;text-align:center;border-radius:6px;font-size:12px;">🍳 요리</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>사이드바 내비게이션 + 대시보드</h3>
+      <p>왼쪽 사이드바에 전체 카테고리, 우측 메인에 인기 공략 / 최신 업데이트</p>
+      <div class="mockup">
+        <div class="mockup-header">Preview</div>
+        <div class="mockup-body">
+          <div style="display:flex;gap:8px;">
+            <div style="background:#1a3a2f;color:#c8b99a;padding:12px;width:160px;font-size:11px;min-height:150px;border-radius:6px 0 0 6px;">
+              <strong style="font-size:13px;">🗡️ BotW</strong><br><br>
+              📋 시작 가이드<br>
+              👹 몬스터 도감<br>
+              ⚔️ 무기 도감<br>
+              🍳 요리 레시피<br>
+              🏛️ Shrine<br>
+              🐎 신수 공략<br>
+              🧩 코로그<br>
+            </div>
+            <div style="flex:1;background:#faf8f5;padding:12px;border-radius:0 6px 6px 0;">
+              <div style="background:#e8e4dc;border-radius:4px;padding:30px;text-align:center;margin-bottom:8px;">인기 공략: 바람신의 신수 공략</div>
+              <div style="background:#e8e4dc;border-radius:4px;padding:15px;text-align:center;">신규: 코로그 #842 발견 위치</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>인터랙티브 하이랄 맵</h3>
+      <p>하이랄 지도가 메인, 클릭하면 지역별 정보/공략 이동</p>
+      <div class="mockup">
+        <div class="mockup-header">Preview</div>
+        <div class="mockup-body">
+          <div class="mock-nav" style="background:#1a3a2f;color:#c8b99a;padding:8px 16px;font-size:13px;">🗡️ Zelda: BotW Map</div>
+          <div style="position:relative;background:linear-gradient(135deg,#6b8f5e,#8fbc6a,#5a7a3a);height:180px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;">
+            🗺️ <strong>Interactive Hyrule Map</strong><br>
+            <span style="opacity:0.8;font-size:11px;">클릭하면 지역 정보로 이동</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

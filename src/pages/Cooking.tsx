@@ -1,16 +1,20 @@
 import { recipes } from '../data/recipes'
 import { useSearch } from '../hooks/useSearch'
+import { useChecklist } from '../hooks/useChecklist'
 
 const effectColors: Record<string, string> = {
   '하트 회복': 'text-red-400',
   '공격력 업': 'text-orange-400',
-  '냉기 저항 업': 'text-cyan-400',
+  '냉기 저항': 'text-cyan-400',
   '이속 업': 'text-yellow-400',
   'HP 회복': 'text-green-400',
 }
 
 export default function Cooking() {
   const { query, setQuery, filtered } = useSearch(recipes, ['name', 'ingredients', 'effect'])
+  const { totalCount } = useChecklist('cooking')
+
+  const progressWidth = recipes.length > 0 ? (totalCount / recipes.length) * 100 : 0
 
   return (
     <div className="space-y-6">
@@ -19,13 +23,21 @@ export default function Cooking() {
         <span className="text-xs text-text-secondary">{recipes.length}개 등록</span>
       </div>
 
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="레시피, 재료, 효과 검색..."
-        className="bg-card text-text-primary text-sm rounded-md px-3 py-1.5 border border-border placeholder:text-text-secondary focus:outline-none focus:border-accent max-w-xs"
+      <ProgressBar
+        found={totalCount}
+        total={recipes.length}
+        widthPercent={progressWidth}
       />
+
+      <div className="flex gap-3 flex-wrap">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="레시피, 재료, 효과 검색..."
+          className="bg-card text-text-primary text-sm rounded-md px-3 py-1.5 border border-border placeholder:text-text-secondary focus:outline-none focus:border-accent flex-1 max-w-xs"
+        />
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.map((recipe) => (
@@ -58,6 +70,22 @@ export default function Cooking() {
           </div>
         ))}
       </div>
+    </div>
+  )
+}
+
+function ProgressBar({ found, total, widthPercent }: { found: number; total: number; widthPercent: number }) {
+  return (
+    <div className="flex items-center gap-3">
+      <div className="flex-1 h-3 bg-card border border-border rounded-full overflow-hidden">
+        <div
+          className="h-full bg-accent rounded-full transition-all duration-300"
+          style={{ width: `${widthPercent}%` }}
+        />
+      </div>
+      <span className="text-xs text-text-secondary whitespace-nowrap">
+        {found}/{total} 수집
+      </span>
     </div>
   )
 }

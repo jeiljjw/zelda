@@ -1,30 +1,36 @@
 import { useState } from 'react'
-import { Korok } from '../types'
+import { Link } from 'react-router-dom'
+import { useChecklist } from '../hooks/useChecklist'
+import { koroks as korokData } from '../data/koroks'
 import { useSearch } from '../hooks/useSearch'
 
-const korokSample: Korok[] = [
-  { id: 'k1', region: '아kkane 고원', hint: '바위 세 개가 원을 그리고 있다', location: '고원 북쪽', puzzleType: '바위 퍼즐' },
-  { id: 'k2', region: '중앙 하이랄', hint: '작은 연못 위의 꽃', location: '연못 중앙', puzzleType: '꽃 퍼즐' },
-  { id: 'k3', region: '동네브 평원', hint: '표적이 3개, 활로 맞추자', location: '평원 동쪽 나무 근처', puzzleType: '표적 퍼즐' },
-  { id: 'k4', region: '헤브라 산맥', hint: '눈 속에 숨어있다', location: '산맥 남쪽', puzzleType: '숨은 코로그' },
-  { id: 'k5', region: '게르디 사막', hint: '모래에 파묻힌 동상', location: '사막 중앙', puzzleType: '동상 퍼즐' },
-]
-
-const allRegions = ['전체', ...new Set(korokSample.map((k) => k.region))]
+const allRegions = ['전체', ...new Set(korokData.map((k) => k.region))]
 
 export default function Koroks() {
   const [region, setRegion] = useState('전체')
   const [puzzle, setPuzzle] = useState('전체')
-  const { query, setQuery, filtered } = useSearch(korokSample, ['hint', 'region', 'location'])
+  const { query, setQuery, filtered } = useSearch(korokData, ['hint', 'region', 'location', 'puzzleType'])
+  const { toggle, totalCount, items } = useChecklist('koroks')
 
-  const puzzleTypes = ['전체', ...new Set(korokSample.map((k) => k.puzzleType))]
+  const puzzleTypes = ['전체', ...new Set(korokData.map((k) => k.puzzleType))]
+
+  const byRegion = region === '전체' ? filtered : filtered.filter((k) => k.region === region)
+  const byPuzzle = puzzle === '전체' ? byRegion : byRegion.filter((k) => k.puzzleType === puzzle)
+
+  const progressWidth = korokData.length > 0 ? (totalCount / korokData.length) * 100 : 0
 
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h1 className="text-lg font-bold text-text-primary">코로그 찾기</h1>
-        <span className="text-xs text-text-secondary">{korokSample.length}개 등록</span>
+        <span className="text-xs text-text-secondary">{korokData.length}개 등록</span>
       </div>
+
+      <ProgressBar
+        found={totalCount}
+        total={korokData.length}
+        widthPercent={progressWidth}
+      />
 
       <div className="flex gap-3 flex-wrap">
         <input
@@ -35,32 +41,66 @@ export default function Koroks() {
           className="bg-card text-text-primary text-sm rounded-md px-3 py-1.5 border border-border placeholder:text-text-secondary focus:outline-none focus:border-accent flex-1 max-w-xs"
         />
         <select value={region} onChange={(e) => setRegion(e.target.value)} className="bg-card text-text-primary text-sm rounded-md px-3 py-1.5 border border-border">
-          {allRegions.map((r) => <option key={r} value={r}>{r}</option>)}
+          {allRegions.map(r => <option key={r} value={r}>{r}</option>)}
         </select>
         <select value={puzzle} onChange={(e) => setPuzzle(e.target.value)} className="bg-card text-text-primary text-sm rounded-md px-3 py-1.5 border border-border">
-          {puzzleTypes.map((p) => <option key={p} value={p}>{p}</option>)}
+          {puzzleTypes.map(p => <option key={p} value={p}>{p}</option>)}
         </select>
       </div>
 
       <div className="space-y-2">
-        {filtered.map((k) => (
-          <div key={k.id} className="bg-card rounded-lg p-4 border border-border">
+        {byPuzzle.map((k) => (
+          <div
+            key={k.id}
+            className={`bg-card rounded-lg p-4 border cursor-pointer transition-colors ${
+              items[k.id]
+                ? 'border-accent'
+                : 'border-border hover:border-accent/50'
+            }`}
+          >
             <div className="flex items-start justify-between">
-              <div>
+              <div onClick={() => toggle(k.id)} className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-lg">🌿</span>
-                  <h3 className="font-semibold text-text-primary text-sm">{k.region}</h3>
+                  <h3 className={`font-semibold text-sm ${
+                    items[k.id] ? 'text-accent' : 'text-text-primary'
+                  }`}>{k.region}</h3>
                 </div>
                 <p className="text-xs text-text-secondary mb-1">{k.hint}</p>
                 <p className="text-xs text-accent">📍 {k.location}</p>
               </div>
-              <span className="px-2 py-0.5 text-[10px] bg-accent-secondary/20 text-accent-secondary rounded">
-                {k.puzzleType}
-              </span>
+              <div className="flex flex-col items-center gap-1">
+                <span className="px-2 py-0.5 text-[10px] bg-accent-secondary/20 text-accent-secondary rounded">
+                  {k.puzzleType}
+                </span>
+                <Link
+                  to={`/koroks/${k.id}`}
+                  className="text-[10px] text-accent hover:underline"
+                >
+                  상세
+                </Link>
+              </div>
             </div>
           </div>
         ))}
+        {byPuzzle.length === 0 && <p className="text-gray-400 text-sm">검색 결과가 없습니다.</p>}
       </div>
+    </div>
+  )
+}
+
+function ProgressBar({ found, total, widthPercent }: { found: number; total: number; widthPercent: number }) {
+  return (
+    <div className="flex items-center gap-3">
+      <div className="flex-1 h-3 bg-card border border-border rounded-full overflow-hidden">
+        <div
+          className="h-full bg-accent rounded-full transition-all duration-300"
+          style={{ width: `${widthPercent}%` }}
+        />
+      </div>
+      <span className="text-xs text-text-secondary whitespace-nowrap">
+        {found}/{total} 발견
+      </span>
     </div>
   )
 }

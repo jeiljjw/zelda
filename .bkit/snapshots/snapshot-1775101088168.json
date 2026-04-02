@@ -1,0 +1,779 @@
+{
+  "timestamp": "2026-04-02T03:38:08.166Z",
+  "reason": "compaction",
+  "status": {
+    "version": "2.0",
+    "lastUpdated": "2026-04-02T03:38:07.839Z",
+    "activeFeatures": [
+      "pdf",
+      "pdf_",
+      "worldcup",
+      "zelda",
+      "data"
+    ],
+    "primaryFeature": "pdf",
+    "features": {
+      "pdf": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-26T11:34:16.286Z",
+          "lastUpdated": "2026-03-26T11:34:16.286Z"
+        },
+        "lastFile": "D:\\Cursor\\pdf\\pdf_\\src\\features\\pdf\\pdfMerge.ts"
+      },
+      "pdf_": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-26T23:27:19.426Z",
+          "lastUpdated": "2026-03-27T03:12:03.679Z"
+        },
+        "lastFile": "D:\\Cursor\\pdf\\pdf_\\src\\App.tsx"
+      },
+      "worldcup": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-30T05:47:50.797Z",
+          "lastUpdated": "2026-03-30T06:01:40.530Z"
+        },
+        "lastFile": "D:\\Antigravity\\worldcup\\src\\pages\\Schedule.tsx"
+      },
+      "zelda": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-31T08:00:39.866Z",
+          "lastUpdated": "2026-04-02T01:14:15.981Z"
+        },
+        "lastFile": "D:\\Antigravity\\zelda\\src\\pages\\Dashboard.tsx"
+      },
+      "data": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-03-31T08:16:28.782Z",
+          "lastUpdated": "2026-04-02T03:38:07.839Z"
+        },
+        "lastFile": "D:\\Antigravity\\zelda\\src\\data\\weapons.ts"
+      }
+    },
+    "pipeline": {
+      "currentPhase": 1,
+      "level": "Dynamic",
+      "phaseHistory": []
+    },
+    "session": {
+      "startedAt": "2026-03-26T07:27:22.625Z",
+      "onboardingCompleted": false,
+      "lastActivity": "2026-04-02T03:38:07.839Z"
+    },
+    "history": [
+      {
+        "timestamp": "2026-03-26T11:34:16.286Z",
+        "feature": "pdf",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-26T23:27:19.426Z",
+        "feature": "pdf_",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-26T23:34:05.581Z",
+        "feature": "pdf_",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-26T23:35:04.756Z",
+        "feature": "pdf_",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T00:33:18.309Z",
+        "feature": "pdf_",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T03:08:31.562Z",
+        "feature": "pdf_",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-27T03:12:03.679Z",
+        "feature": "pdf_",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-30T05:47:50.797Z",
+        "feature": "worldcup",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-30T05:56:56.067Z",
+        "feature": "worldcup",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-30T06:01:40.530Z",
+        "feature": "worldcup",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:00:39.866Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:01:07.776Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:01:12.487Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:01:22.103Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:04:47.738Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:04:48.332Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:04:53.123Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:07:53.160Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:07:53.447Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:08:22.153Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:08:22.445Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:08:22.726Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:08:22.979Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:08:23.245Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:08:23.508Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:08:23.776Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:08:24.052Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:08:24.306Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:08:24.552Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:13:12.901Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:13:13.169Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:16:28.501Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:16:28.782Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:16:29.048Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:16:51.121Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:17:05.740Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:17:11.592Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:17:33.615Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:17:39.860Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:17:55.186Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:18:00.770Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:18:14.045Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:18:30.387Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:19:09.753Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:19:13.847Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:23:50.008Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:23:50.282Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:23:50.556Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:23:59.806Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:28:54.432Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:28:54.720Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:28:54.990Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:28:55.260Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:28:55.529Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:30:05.862Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:30:46.565Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:31:06.190Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:31:16.004Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:31:48.608Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-03-31T08:32:04.019Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:32:25.386Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:33:04.914Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:33:33.130Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:33:56.734Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:34:25.267Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:37:00.679Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:37:08.479Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:37:57.656Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:38:08.654Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:38:16.582Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:38:49.367Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:38:56.825Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:39:23.501Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:39:35.378Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:39:51.186Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:42:34.371Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:42:56.125Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:43:21.254Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:43:35.874Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:44:27.471Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:44:39.343Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:45:14.375Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:45:56.797Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:47:54.062Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:48:31.831Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:49:00.776Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:49:24.290Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:49:34.542Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:49:45.300Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:50:07.145Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:50:16.958Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:50:26.877Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:51:04.580Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:52:54.306Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:53:15.278Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:53:50.851Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:54:18.100Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:54:53.635Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:55:24.027Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:55:49.709Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:56:11.869Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:57:07.796Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:57:19.942Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:57:56.321Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:58:45.997Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T00:59:01.198Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T01:03:54.837Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T01:05:34.701Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T01:07:02.122Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T01:14:15.981Z",
+        "feature": "zelda",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T01:25:18.287Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T01:44:19.585Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T02:08:35.876Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-02T03:38:07.839Z",
+        "feature": "data",
+        "phase": "do",
+        "action": "updated"
+      }
+    ]
+  }
+}

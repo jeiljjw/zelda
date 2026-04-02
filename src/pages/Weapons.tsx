@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { weapons } from '../data/weapons'
 import { useSearch } from '../hooks/useSearch'
+import { useChecklist } from '../hooks/useChecklist'
 import ItemCard from '../components/ItemCard'
 
 const typeIcons: Record<string, string> = {
@@ -22,9 +24,13 @@ const typeLabels: Record<string, string> = {
 export default function Weapons() {
   const [typeFilter, setTypeFilter] = useState<string>('all')
   const { query, setQuery, filtered } = useSearch(weapons, ['name', 'locations', 'description'])
+  const { totalCount } = useChecklist('weapons')
+  const navigate = useNavigate()
 
   const types = ['all', ...Object.keys(typeLabels)]
   const shown = typeFilter === 'all' ? filtered : filtered.filter((w) => w.type === typeFilter)
+
+  const progressWidth = weapons.length > 0 ? (totalCount / weapons.length) * 100 : 0
 
   return (
     <div className="space-y-6">
@@ -32,6 +38,12 @@ export default function Weapons() {
         <h1 className="text-lg font-bold text-text-primary">무기 도감</h1>
         <span className="text-xs text-text-secondary">{weapons.length}개 등록</span>
       </div>
+
+      <ProgressBar
+        found={totalCount}
+        total={weapons.length}
+        widthPercent={progressWidth}
+      />
 
       <div className="flex gap-3 flex-wrap">
         <input
@@ -60,21 +72,41 @@ export default function Weapons() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {shown.map((weapon) => (
-          <ItemCard
-            key={weapon.id}
-            icon={typeIcons[weapon.type] || '⚔️'}
-            title={weapon.name}
-            stats={[
-              { label: '공격력', value: String(weapon.attack) },
-              { label: '내구도', value: String(weapon.durability) },
-              { label: '유형', value: typeLabels[weapon.type] },
-              { label: '위치', value: weapon.locations.join(', ') || '알 수 없음' },
-            ]}
-            description={weapon.description}
-            badge={weapon.attack >= 50 ? '★ 강력' : undefined}
-          />
+          <div key={weapon.id} onClick={() => navigate(`/weapons/${weapon.id}`)} className="cursor-pointer group">
+            <ItemCard
+              icon={typeIcons[weapon.type] || '⚔️'}
+              title={weapon.name}
+              stats={[
+                { label: '공격력', value: String(weapon.attack) },
+                { label: '내구도', value: String(weapon.durability) },
+                { label: '유형', value: typeLabels[weapon.type] },
+                { label: '위치', value: weapon.locations.join(', ') || '알 수 없음' },
+              ]}
+              description={weapon.description}
+              badge={weapon.attack >= 50 ? '★ 강력' : undefined}
+              image={weapon.image}
+            />
+          </div>
         ))}
       </div>
+
+      <p className="text-xs text-text-secondary">클릭하면 상세 정보를 볼 수 있습니다.</p>
+    </div>
+  )
+}
+
+function ProgressBar({ found, total, widthPercent }: { found: number; total: number; widthPercent: number }) {
+  return (
+    <div className="flex items-center gap-3">
+      <div className="flex-1 h-3 bg-card border border-border rounded-full overflow-hidden">
+        <div
+          className="h-full bg-accent rounded-full transition-all duration-300"
+          style={{ width: `${widthPercent}%` }}
+        />
+      </div>
+      <span className="text-xs text-text-secondary whitespace-nowrap">
+        {found}/{total} 수집
+      </span>
     </div>
   )
 }

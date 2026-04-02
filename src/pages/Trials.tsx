@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { trials } from '../data/trials'
 import GuideSection from '../components/GuideSection'
 
@@ -11,7 +12,15 @@ export default function Trials() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {trials.map((trial) => (
           <div key={trial.id} className="bg-card rounded-xl p-5 border border-border">
-            <h2 className="font-semibold text-text-primary mb-1">{trial.name}</h2>
+            <div className="flex items-start justify-between mb-1">
+              <h2 className="font-semibold text-text-primary">{trial.name}</h2>
+              <Link
+                to={`/trials/${trial.id}`}
+                className="text-xs text-accent hover:underline"
+              >
+                상세 보기 →
+              </Link>
+            </div>
             <p className="text-xs text-accent mb-3">{trial.reward}</p>
             <GuideSection title="진행 순서" steps={trial.walkthrough} />
           </div>
