@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import KakaoAdBanner from './components/KakaoAdBanner'
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
 import GlobalSearch from './components/GlobalSearch'
@@ -59,13 +60,7 @@ export default function App() {
 
       {/* Fixed Bottom Ad Banner */}
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border flex justify-center items-center" style={{ height: '90px' }}>
-        <ins
-          className="kakao_ad_area"
-          style={{ display: 'none' }}
-          data-ad-unit="DAN-pJdf2RiEcucaxwi8"
-          data-ad-width="728"
-          data-ad-height="90"
-        />
+        <KakaoAdBanner adUnit="DAN-pJdf2RiEcucaxwi8" width={728} height={90} />
       </div>
     </div>
   )

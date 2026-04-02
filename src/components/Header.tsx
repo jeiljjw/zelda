@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom'
 import { useMemo } from 'react'
+import KakaoAdBanner from './KakaoAdBanner'
 
 const routeLabels: Record<string, string> = {
   '/': '대시보드',
@@ -49,13 +50,7 @@ export default function Header() {
 
       {/* Kakao Ad Banner - Centered */}
       <div className="flex-1 flex justify-center items-center">
-        <ins
-          className="kakao_ad_area"
-          style={{ display: 'none' }}
-          data-ad-unit="DAN-LX5Ji3grmPJUfZ0I"
-          data-ad-width="728"
-          data-ad-height="90"
-        />
+        <KakaoAdBanner adUnit="DAN-LX5Ji3grmPJUfZ0I" width={728} height={90} />
       </div>
 
       <h2 className="text-sm font-semibold text-text-primary flex-shrink-0">
