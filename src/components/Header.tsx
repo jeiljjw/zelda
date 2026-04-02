@@ -36,7 +36,7 @@ export default function Header() {
 
   return (
     <header className="h-16 border-b border-border bg-sidebar/50 flex items-center px-4 sm:px-6 gap-4 flex-shrink-0 pl-14 lg:pl-4">
-      <nav className="flex items-center gap-1 text-xs text-text-secondary">
+      <nav className="flex items-center gap-1 text-xs text-text-secondary flex-shrink-0">
         {breadcrumbs.map((crumb, i) => (
           <span key={crumb.path} className="flex items-center gap-1">
             {i > 0 && <span>/</span>}
@@ -46,7 +46,19 @@ export default function Header() {
           </span>
         ))}
       </nav>
-      <h2 className="text-sm font-semibold text-text-primary ml-auto">
+
+      {/* Kakao Ad Banner - Centered */}
+      <div className="flex-1 flex justify-center items-center">
+        <ins
+          className="kakao_ad_area"
+          style={{ display: 'none' }}
+          data-ad-unit="DAN-LX5Ji3grmPJUfZ0I"
+          data-ad-width="728"
+          data-ad-height="90"
+        />
+      </div>
+
+      <h2 className="text-sm font-semibold text-text-primary flex-shrink-0">
         {title}
       </h2>
     </header>
