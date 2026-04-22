@@ -16,13 +16,13 @@ export default function KakaoAdBanner({ adUnit, width, height }: KakaoAdBannerPr
     requestAnimationFrame(() => {
       // Remove existing script so SDK re-scans DOM
       const existing = document.querySelector(
-        'script[src="//t1.daumcdn.net/kas/static/ba.min.js"]'
+        'script[src="//t1.kakaocdn.net/kas/static/ba.min.js"]'
       )
       if (existing) existing.remove()
 
       // Insert SDK script — it will scan the current DOM and find our <ins>
       const script = document.createElement('script')
-      script.src = '//t1.daumcdn.net/kas/static/ba.min.js'
+      script.src = '//t1.kakaocdn.net/kas/static/ba.min.js'
       script.async = true
       script.type = 'text/javascript'
       document.body.appendChild(script)
