@@ -2,3 +2,7 @@ node_modules/
 dist/
 .env
 nul
+.claude
+.bkit
+.superpowers
+docs/
